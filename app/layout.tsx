@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import '../styles/tailwind.css';
+import '../styles/theme.css';
 
 export const metadata: Metadata = {
   title: 'Next.js on Replit',
