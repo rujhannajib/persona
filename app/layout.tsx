@@ -3,8 +3,8 @@ import '../styles/tailwind.css';
 import '../styles/theme.css';
 
 export const metadata: Metadata = {
-  title: 'Next.js on Replit',
-  description: 'Deploy your Next.js application to Replit'
+  title: "Rujhan Najib's Portfolio",
+  description: 'A showcase of Rujhan Najib’s work, skills, and projects.',
 };
 
 export default function RootLayout({
