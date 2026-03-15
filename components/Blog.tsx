@@ -125,12 +125,12 @@ export function Blog() {
         </div>
 
         <div className="text-center mt-12">
-          <a
+          {/* <a
             href="#"
             className="inline-block px-8 py-3 border-2 rounded-full transition-colors text-lg border-accent text-accent hover:bg-accent hover:text-cream-200"
           >
             View All Posts
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
