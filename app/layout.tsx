@@ -1,14 +1,18 @@
-import type { Metadata } from 'next';
-import '../styles/tailwind.css';
-import '../styles/theme.css';
+import type { Metadata } from "next";
+import "../styles/tailwind.css";
+import "../styles/theme.css";
 
 export const metadata: Metadata = {
   title: "Rujhan Najib's Portfolio",
-  description: 'A showcase of Rujhan Najib’s work, skills, and projects.',
+  description: "A showcase of Rujhan Najib’s work, skills, and projects.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
