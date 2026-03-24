@@ -69,12 +69,14 @@ export function Blog() {
                 key={post.title}
                 className="flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] rounded-xl overflow-hidden border transition-all group border-chocolate-600 hover:bg-accent hover:border-accent"
               >
+                 
                 <div className="aspect-video overflow-hidden">
-                  <ImageWithFallback
+                  {/* If no image provided, no display */}
+                  {post.image && (<ImageWithFallback
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  />)}
                 </div>
                 <div className="p-6">
                   <span className="inline-block px-3 py-1 border text-sm rounded-full mb-3 border-chocolate-600 text-chocolate-600 group-hover:border-cream-200 group-hover:text-cream-200">

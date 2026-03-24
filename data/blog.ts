@@ -45,6 +45,27 @@ export const blogPosts: BlogPost[] = [
       IHPM is designed to be paired with a personal homelab setup — in my case, Admona — where it runs as part of a self-hosted, privacy-first infrastructure.
       `,
   },
+  {
+    slug: "pimp",
+    title: "Me, Invest and PIMP (Personal Investment Management Platform)",
+    excerpt: "Story of my life and investing",
+    date: "March 24, 2026",
+    readTime: "2 min read",
+    image: "",
+    category: "Finance",
+    content: `
+      I started investing in my second year. I mostly invest in ETFs and commodities, as they are stable and I don't have enough capital to invest in riskier environments. 
+      I learned about investing when I joined my university's Quantitative Finance Club, PSU Quant. The lectures were rigorous, but I never skipped a meeting. 
+      The vice president of the club noticed me and invited me to join the development team. I had to go through my first technical interview, consisting of two easy LeetCode questions and several Python questions from CMPSC 132. 
+      I had the opportunity to build the club's first homepage and contribute to its trading tool. 
+
+Several months in, I realized that gambling all my spare time on landing a job at a quant firm might not be worth it. 
+That was when I decided to quit the club. Now, in my final year, I am taking MATH 448, Mathematical Finance, to learn the material I was introduced to in the club. 
+To make sure I applied what I learned both in the club and in class, I created this project, PIMP (cool name, right?) to help me analyze my investment decisions. 
+I personally use MooMoo as my stock broker, but the UI can be overwhelming. PIMP is designed to be used as a research platform before I execute trades on my broker. 
+Right now, PIMP is just an API connecting my Supabase database with API endpoints. Future development will include graphical interfaces.
+      `,
+  },
 
 //   {
 //     slug: "introduction-to-machine-learning-with-python",

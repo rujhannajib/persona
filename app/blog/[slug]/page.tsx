@@ -51,11 +51,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <article className="max-w-3xl mx-auto">
           {/* Hero image */}
           <div className="w-3/4 mx-auto aspect-video rounded-xl overflow-hidden mb-8 shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-chocolate-600/10 ring-1 ring-chocolate-600/5">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
+            {post.image && (
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            )}
           </div>
 
           {/* Meta */}

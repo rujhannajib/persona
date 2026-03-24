@@ -23,4 +23,12 @@ export const projects: Project[] = [
     tags: ["Python", "MySQL", "Cryptography"],
     githubUrl: "https://github.com/rujhannajib/IHPM",
   },
+  {
+    title: "PIMP (Personal Investment Management Platform)",
+    description:
+      "A FastAPI backend for tracking investment portfolios with real-time market data.",
+    image: "",
+    tags: ["Python", "yfinance", "Supabase"],
+    githubUrl: "https://github.com/rujhannajib/pimp_backend",
+  },
 ];
