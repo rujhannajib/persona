@@ -64,7 +64,7 @@ export function Blog() {
               transform: `translateX(-${currentIndex * (100 / itemsPerView + 2.67)}%)`,
             }}
           >
-            {blogPosts.map((post) => (
+            {blogPosts.toReversed().map((post) => (
               <article
                 key={post.title}
                 className="flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] rounded-xl overflow-hidden border transition-all group border-chocolate-600 hover:bg-accent hover:border-accent"

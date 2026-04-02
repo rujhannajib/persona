@@ -66,6 +66,26 @@ I personally use MooMoo as my stock broker, but the UI can be overwhelming. PIMP
 Right now, PIMP is just an API connecting my Supabase database with API endpoints. Future development will include graphical interfaces.
       `,
   },
+  {
+    slug: "admona",
+    title: "Homelab: Admona",
+    excerpt: "Building my own lab",
+    date: "April 2, 2026",
+    readTime: "2 min read",
+    image: "/blogs/admona_barebone.png",
+    category: "Tech",
+    content: `
+      A connected world is both a good and bad thing. The good news is that you can connect with other people. 
+      The bad news is that any entity can access your digital information, intellectual property, and so on. 
+      A connected and digitalized world has created excessive dependency on corporations, which are known for driving up their revenue by all means possible, including manipulating people. 
+      That is the reason why I decided to start my own homelab.
+
+      The second reason is that I have started to get back into robotics, which means I will have a room full of circuit boards and small LED lights all over the floor. 
+      To make sure I don't waste money on unnecessary things, it is important to have a plan, which is part of Admona.
+
+      This is the last you will hear about this project because it should be a [secret](https://youtu.be/Aq5WXmQQooo?si=bGS01clLc-K7ZFMz). Bye!
+      `,
+  },
 
 //   {
 //     slug: "introduction-to-machine-learning-with-python",
