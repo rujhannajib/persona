@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="w-3/4 mx-auto aspect-video rounded-xl overflow-hidden mb-8 shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-chocolate-600/10 ring-1 ring-chocolate-600/5">
             {post.image && (
               <img
-                src={post.image}
+                src={resolveImageSrc(post.image)}
                 alt={post.title}
                 className="w-full h-full object-cover"
               />
@@ -104,12 +104,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 return <h3 key={i}>{line.slice(4)}</h3>;
               }
               // Images: ![alt](url)
-              const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+              const imgMatch = line.match(/^\s*!\[([^\]]*)\]\(([^)]+)\)\s*$/);
               if (imgMatch) {
                 return (
                   <figure key={i} className="my-8">
                     <img
-                      src={imgMatch[2]}
+                      src={resolveImageSrc(imgMatch[2])}
                       alt={imgMatch[1]}
                       className="w-3/4 mx-auto rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-chocolate-600/10"
                     />
@@ -164,6 +164,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </main>
     </div>
   );
+}
+
+function resolveImageSrc(src: string) {
+  const trimmedSrc = src.trim();
+
+  // Keep external and already-absolute paths unchanged.
+  if (
+    /^(https?:)?\/\//i.test(trimmedSrc) ||
+    trimmedSrc.startsWith("/") ||
+    trimmedSrc.startsWith("data:") ||
+    trimmedSrc.startsWith("blob:")
+  ) {
+    return trimmedSrc;
+  }
+
+  // Treat relative markdown paths as files under public/.
+  const normalized = trimmedSrc.replace(/^(\.\/)+/, "").replace(/^(\.\.\/)+/, "");
+  return `/${normalized}`;
 }
 
 /** Renders inline `code` backtick spans, **bold**, and [links](url) within a line */

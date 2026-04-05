@@ -86,65 +86,107 @@ Right now, PIMP is just an API connecting my Supabase database with API endpoint
       This is the last you will hear about this project because it should be a [secret](https://youtu.be/Aq5WXmQQooo?si=bGS01clLc-K7ZFMz). Bye!
       `,
   },
+  {
+    slug: "internship1",
+    title: "Internship#1: MARA",
+    excerpt: "Policy research for my sponsor",
+    date: "April 5, 2026",
+    readTime: "4 min read",
+    image: "/blogs/sleeping.jpg",
+    category: "Career",
+    content: `
+      Well, I guess this is my first blog about a personal experience. Have you ever heard of someone doing an internship at MARA? Me neither. But this internship felt truly special to me. 
+      If I had a list of the 10 most important events in my life, this would be one of them.
 
-//   {
-//     slug: "introduction-to-machine-learning-with-python",
-//     title: "Introduction to Machine Learning with Python",
-//     excerpt:
-//       "Get started with machine learning using Python. Learn about scikit-learn, neural networks, and how to build your first ML model.",
-//     date: "January 20, 2026",
-//     readTime: "10 min read",
-//     image:
-//       "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmd8ZW58MXx8fHwxNzcxMjcxMjQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-//     category: "Machine Learning",
-//     content: `Machine learning is transforming industries from healthcare to finance. Here's how to get started with Python.
+      First, let's talk about how I got the job. It was Spring 2024, and I was applying to every internship I could find. I got an offer from Pandai (a Malaysian educational startup), but the problem was they were stingy with holiday breaks and the allowance was only RM800 a month. 
+      Then one day, Puan Muna, MARA's US director, shared an email about a policy research internship offer at MARA. Puan Muna was no stranger to me — I had visited her house in Washington DC just a couple of weeks prior. 
+      It was my first time seeing a policy research internship, and I sent in my application because I was drawn to the investment and data science aspects of the role. Long story short, I got the offer and had to choose between MARA and Pandai. 
+      MARA had several clear advantages: 1) MARA is my sponsor, 2) the allowance was RM5/hour, meaning I could actually earn more than RM800 a month (RM 5 x 9 hours of working x 20 days = RM 800), and 3) unlimited breaks. Honestly, there were also plenty of complaints about Pandai's HR department on Glassdoor, and I figured I could always do a tech internship in my junior year.
+      
+      ![Visiting the parliment as MARA representative](/blogs/parliment.jpg)
 
-// ## Setting Up
+      I was pretty foolish when I said I could start on the 20th of May, given that I only arrived in Malaysia on the 17th — leaving myself just two days to recover after a year abroad. There was no direct public transport from my house to the office (near SOGO), and I didn't have a driving license (thanks to JPJ giving me the wrong instructions for renewing it). Luckily, my father works in KL and could drop me off at KL Sentral. 
+      From there, I took the monorail straight to Medan Tuanku and walked to the office.
+      
+      ![My desk](/blogs/mara_workspace.jpg)
 
-// Python's ML ecosystem is mature and well-supported. Start with these essential libraries:
+      I showed up on my first day dressed like a catering worker — white collar shirt, black pants. People say first impressions really matter, and they took that seriously. Within my first hour, I had joined a meeting, received my first assignment with no template and no clear instructions, and was told to present results the next day. 
+      I literally spent hours staring at an Excel sheet trying to figure out what to do.  Eventually, I came up with the idea of cross-checking MARA's promises to the public using the data.  I presented my findings the next day and was pretty confident I nailed it. My supervisor packaged them into an official slide deck and sent it up to top management. 
+      The coolest part of this internship was getting to meet well-known politicians and corporate figures. One of them was the former Governor of Bank Negara, Tan Sri Muhammad Ibrahim, who sat on the MARA board and frequently visited the Strategic Planning Division. He walked me through basic financial modelling, and I got the chance to briefly discuss my findings with him. 
+      Another memorable opportunity was visiting the Malaysian Parliament — not as a tourist, but as MARA staff. It was fascinating to see two politicians laughing together just minutes after going at each other during a parliamentary session. 
+      I even got to attend a meeting chaired by the Deputy Prime Minister, DS Ahmad Zahid Hamidi — a session so exclusive that my own boss had only attended it twice in her entire career.
+      
+      ![One of the meetings where I got the chance to work with former governor of Bank Negara](/blogs/mara_meeting.jpg)
 
-// \`\`\`bash
-// pip install numpy pandas scikit-learn matplotlib
-// \`\`\`
+      I have to give credit to my coworkers in the Strategic Planning Division for the incredible support they showed me throughout the internship. They treated me like a real employee, which I think is genuinely rare. 
+      They always invited me out for lunch. Honestly, after my second year at Penn State, I had almost forgotten what it felt like to eat lunch with people. During my last month at MARA, I didn't spend a single cent on lunch because my coworkers kept picking up the tab. 
+      I really hope I get the same kind of colleagues (in term of kindness and professionalism, of course) when I start my first job after graduation.
 
-// ## Your First Model
+      ![My last day of internship](/blogs/mara_farewell.jpg)
 
-// ### 1. Load and Explore Data
+      It was eye-opening to witness the full arc of how government policy is made — from proposal all the way to Parliament. I left feeling genuinely happy knowing I had contributed something meaningful, and that someone like me could still make a difference in the public sphere. 
+      Internship rating: 5/5.
+      `,
+  },
 
-// \`\`\`python
-// import pandas as pd
-// from sklearn.datasets import load_iris
+  //   {
+  //     slug: "introduction-to-machine-learning-with-python",
+  //     title: "Introduction to Machine Learning with Python",
+  //     excerpt:
+  //       "Get started with machine learning using Python. Learn about scikit-learn, neural networks, and how to build your first ML model.",
+  //     date: "January 20, 2026",
+  //     readTime: "10 min read",
+  //     image:
+  //       "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmd8ZW58MXx8fHwxNzcxMjcxMjQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+  //     category: "Machine Learning",
+  //     content: `Machine learning is transforming industries from healthcare to finance. Here's how to get started with Python.
 
-// data = load_iris()
-// df = pd.DataFrame(data.data, columns=data.feature_names)
-// \`\`\`
+  // ## Setting Up
 
-// ### 2. Train a Classifier
+  // Python's ML ecosystem is mature and well-supported. Start with these essential libraries:
 
-// \`\`\`python
-// from sklearn.model_selection import train_test_split
-// from sklearn.ensemble import RandomForestClassifier
+  // \`\`\`bash
+  // pip install numpy pandas scikit-learn matplotlib
+  // \`\`\`
 
-// X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2)
-// model = RandomForestClassifier()
-// model.fit(X_train, y_train)
-// \`\`\`
+  // ## Your First Model
 
-// ### 3. Evaluate
+  // ### 1. Load and Explore Data
 
-// \`\`\`python
-// accuracy = model.score(X_test, y_test)
-// print(f"Accuracy: {accuracy:.2%}")
-// \`\`\`
+  // \`\`\`python
+  // import pandas as pd
+  // from sklearn.datasets import load_iris
 
-// ## Key Concepts
+  // data = load_iris()
+  // df = pd.DataFrame(data.data, columns=data.feature_names)
+  // \`\`\`
 
-// - **Supervised Learning** — learning from labeled examples (classification, regression)
-// - **Unsupervised Learning** — finding patterns in unlabeled data (clustering, dimensionality reduction)
-// - **Neural Networks** — deep learning models inspired by biological neural networks
+  // ### 2. Train a Classifier
 
-// ## Conclusion
+  // \`\`\`python
+  // from sklearn.model_selection import train_test_split
+  // from sklearn.ensemble import RandomForestClassifier
 
-// Start simple with scikit-learn, understand the fundamentals, and gradually explore deep learning frameworks like PyTorch and TensorFlow.`,
-//   },
+  // X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2)
+  // model = RandomForestClassifier()
+  // model.fit(X_train, y_train)
+  // \`\`\`
+
+  // ### 3. Evaluate
+
+  // \`\`\`python
+  // accuracy = model.score(X_test, y_test)
+  // print(f"Accuracy: {accuracy:.2%}")
+  // \`\`\`
+
+  // ## Key Concepts
+
+  // - **Supervised Learning** — learning from labeled examples (classification, regression)
+  // - **Unsupervised Learning** — finding patterns in unlabeled data (clustering, dimensionality reduction)
+  // - **Neural Networks** — deep learning models inspired by biological neural networks
+
+  // ## Conclusion
+
+  // Start simple with scikit-learn, understand the fundamentals, and gradually explore deep learning frameworks like PyTorch and TensorFlow.`,
+  //   },
 ];
