@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export function Header() {
-  const [headerBg, setHeaderBg] = useState<string>("rgb(254, 249, 240)");
+  const [headerBg, setHeaderBg] = useState<string>("rgb(255, 255, 255)");
 
   useEffect(() => {
     const getEffectiveBackgroundColor = (startElement: Element | null) => {
@@ -71,7 +71,7 @@ export function Header() {
             <img
               src="/logo.png"
               alt="RN Logo"
-              className="h-12 w-auto text-chocolate-600"
+              className="h-12 w-auto"
             />
           </a>
 
@@ -81,7 +81,7 @@ export function Header() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="transition-colors text-base text-chocolate-600 hover:text-accent"
+                  className="transition-colors text-base text-black hover:text-accent"
                 >
                   {item.label}
                 </a>

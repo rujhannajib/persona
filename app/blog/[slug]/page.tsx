@@ -33,13 +33,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-cream-200">
+    <div className="min-h-screen bg-white">
       {/* Header bar */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-cream-200 border-b border-chocolate-600/10">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/10">
         <nav className="max-w-4xl mx-auto px-4 py-4">
           <a
             href="/#blog"
-            className="inline-flex items-center gap-2 text-chocolate-600 hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 text-black hover:text-accent transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
@@ -50,7 +50,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <main className="pt-24 pb-20 px-4">
         <article className="max-w-3xl mx-auto">
           {/* Hero image */}
-          <div className="w-3/4 mx-auto aspect-video rounded-xl overflow-hidden mb-8 shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-chocolate-600/10 ring-1 ring-chocolate-600/5">
+          <div className="w-3/4 mx-auto aspect-video rounded-xl overflow-hidden mb-8 shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-black/10 ring-1 ring-black/5">
             {post.image && (
               <img
                 src={resolveImageSrc(post.image)}
@@ -62,13 +62,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Meta */}
           <div className="mb-6">
-            <span className="inline-block px-3 py-1 border text-sm rounded-full mb-4 border-chocolate-600 text-chocolate-600">
+            <span className="inline-block px-3 py-1 border text-sm rounded-full mb-4 border-black text-black">
               {post.category}
             </span>
-            <h1 className="text-4xl md:text-5xl mb-4 text-chocolate-600">
+            <h1 className="text-4xl md:text-5xl mb-4 text-black">
               {post.title}
             </h1>
-            <div className="flex items-center gap-6 text-sm text-chocolate-400">
+            <div className="flex items-center gap-6 text-sm text-black/60">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 <span>{post.date}</span>
@@ -82,15 +82,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Content */}
           <div
-            className="prose prose-lg max-w-none text-chocolate-600 
-            [&_h2]:text-3xl [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:text-chocolate-600
-            [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:text-chocolate-600
+            className="prose prose-lg max-w-none text-black
+            [&_h2]:text-3xl [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:text-black
+            [&_h3]:text-2xl [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:text-black
             [&_p]:mb-4 [&_p]:leading-relaxed
             [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_ul_li]:mb-1
             [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-4 [&_ol_li]:mb-1
-            [&_strong]:font-semibold [&_strong]:text-chocolate-600
-            [&_code]:bg-chocolate-600/10 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm
-            [&_pre]:bg-chocolate-600/5 [&_pre]:border [&_pre]:border-chocolate-600/20 [&_pre]:rounded-lg [&_pre]:p-4 [&_pre]:mb-6 [&_pre]:overflow-x-auto
+            [&_strong]:font-semibold [&_strong]:text-black
+            [&_code]:bg-black/10 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm
+            [&_pre]:bg-black/5 [&_pre]:border [&_pre]:border-black/20 [&_pre]:rounded-lg [&_pre]:p-4 [&_pre]:mb-6 [&_pre]:overflow-x-auto
             [&_pre_code]:bg-transparent [&_pre_code]:p-0
           "
           >
@@ -111,10 +111,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <img
                       src={resolveImageSrc(imgMatch[2])}
                       alt={imgMatch[1]}
-                      className="w-3/4 mx-auto rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-chocolate-600/10"
+                      className="w-3/4 mx-auto rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-black/10"
                     />
                     {imgMatch[1] && (
-                      <figcaption className="text-center text-sm text-chocolate-400 mt-3">
+                      <figcaption className="text-center text-sm text-black/60 mt-3">
                         {imgMatch[1]}
                       </figcaption>
                     )}
@@ -151,10 +151,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {/* Back link */}
-          <div className="mt-16 pt-8 border-t border-chocolate-600/20">
+          <div className="mt-16 pt-8 border-t border-black/20">
             <a
               href="/#blog"
-              className="inline-flex items-center gap-2 px-6 py-3 border-2 rounded-full transition-colors border-accent text-accent hover:bg-accent hover:text-cream-200"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 rounded-full transition-colors border-accent text-accent hover:bg-accent hover:text-white"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to All Posts

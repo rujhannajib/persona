@@ -20,25 +20,25 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 px-4 bg-cream-100 border-t border-chocolate-600"
+      className="py-20 px-4 bg-white border-t border-black"
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-12">
-          <h2 className="text-5xl md:text-6xl text-chocolate-600">
+          <h2 className="text-5xl md:text-6xl text-black">
             Featured Projects
           </h2>
           <div className="flex gap-2">
             <button
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className="p-3 rounded-full border-2 transition-all border-chocolate-600 text-chocolate-600 hover:bg-accent hover:border-accent hover:text-cream-200 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-chocolate-600"
+              className="p-3 rounded-full border-2 transition-all border-black text-black hover:bg-accent hover:border-accent hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-black"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
               disabled={currentIndex === maxIndex}
-              className="p-3 rounded-full border-2 transition-all border-chocolate-600 text-chocolate-600 hover:bg-accent hover:border-accent hover:text-cream-200 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-chocolate-600"
+              className="p-3 rounded-full border-2 transition-all border-black text-black hover:bg-accent hover:border-accent hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-black"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -55,7 +55,7 @@ export function Projects() {
             {projects.toReversed().map((project) => (
               <div
                 key={project.title}
-                className="flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] rounded-xl overflow-hidden border transition-all group border-chocolate-600 hover:bg-accent hover:border-accent"
+                className="flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] rounded-xl overflow-hidden border transition-all group border-black hover:bg-accent hover:border-accent"
               >
                 <div className="aspect-video overflow-hidden">
                   {/* If no image provided, no display */}
@@ -66,17 +66,17 @@ export function Projects() {
                   />)}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl mb-2 text-chocolate-600 group-hover:text-cream-200">
+                  <h3 className="text-2xl mb-2 text-black group-hover:text-white">
                     {project.title}
                   </h3>
-                  <p className="mb-4 text-chocolate-600 group-hover:text-cream-200">
+                  <p className="mb-4 text-black group-hover:text-white">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 border text-sm rounded-full border-chocolate-600 text-chocolate-600 group-hover:border-cream-200 group-hover:text-cream-200"
+                        className="px-3 py-1 border text-sm rounded-full border-black text-black group-hover:border-white group-hover:text-white"
                       >
                         {tag}
                       </span>
@@ -85,7 +85,7 @@ export function Projects() {
                   <div className="flex gap-4">
                     <a
                       href={project.githubUrl}
-                      className="flex items-center gap-2 transition-colors text-chocolate-600 group-hover:text-cream-200"
+                      className="flex items-center gap-2 transition-colors text-black group-hover:text-white"
                     >
                       <Github className="w-5 h-5" />
                       <span>Code</span>
@@ -93,7 +93,7 @@ export function Projects() {
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
-                        className="flex items-center gap-2 transition-colors text-chocolate-600 group-hover:text-cream-200"
+                        className="flex items-center gap-2 transition-colors text-black group-hover:text-white"
                       >
                         <ExternalLink className="w-5 h-5" />
                         <span>Live Demo</span>
@@ -115,7 +115,7 @@ export function Projects() {
               className={`w-3 h-3 rounded-full transition-all ${
                 currentIndex === index
                   ? "bg-accent"
-                  : "bg-chocolate-600/30 hover:bg-chocolate-600/50"
+                  : "bg-black/30 hover:bg-black/50"
               }`}
             />
           ))}

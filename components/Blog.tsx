@@ -26,15 +26,15 @@ export function Blog() {
   return (
     <section
       id="blog"
-      className="py-20 px-4 bg-cream-200 border-t border-chocolate-600"
+      className="py-20 px-4 bg-white border-t border-black"
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
           <div className="text-center md:text-left mb-6 md:mb-0">
-            <h2 className="text-5xl md:text-6xl mb-4 text-chocolate-600">
+            <h2 className="text-5xl md:text-6xl mb-4 text-black">
               Latest Blog Posts
             </h2>
-            <p className="text-lg max-w-2xl text-chocolate-400">
+            <p className="text-lg max-w-2xl text-black/60">
               Sharing my thoughts on web development, best practices, and the
               latest technologies.
             </p>
@@ -43,14 +43,14 @@ export function Blog() {
             <button
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className="p-3 rounded-full border-2 transition-all border-chocolate-600 text-chocolate-600 hover:bg-accent hover:border-accent hover:text-cream-200 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-chocolate-600"
+              className="p-3 rounded-full border-2 transition-all border-black text-black hover:bg-accent hover:border-accent hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-black"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
               disabled={currentIndex === maxIndex}
-              className="p-3 rounded-full border-2 transition-all border-chocolate-600 text-chocolate-600 hover:bg-accent hover:border-accent hover:text-cream-200 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-chocolate-600"
+              className="p-3 rounded-full border-2 transition-all border-black text-black hover:bg-accent hover:border-accent hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-black"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -67,7 +67,7 @@ export function Blog() {
             {blogPosts.toReversed().map((post) => (
               <article
                 key={post.title}
-                className="flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] rounded-xl overflow-hidden border transition-all group border-chocolate-600 hover:bg-accent hover:border-accent"
+                className="flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] rounded-xl overflow-hidden border transition-all group border-black hover:bg-accent hover:border-accent"
               >
                  
                 <div className="aspect-video overflow-hidden">
@@ -79,16 +79,16 @@ export function Blog() {
                   />)}
                 </div>
                 <div className="p-6">
-                  <span className="inline-block px-3 py-1 border text-sm rounded-full mb-3 border-chocolate-600 text-chocolate-600 group-hover:border-cream-200 group-hover:text-cream-200">
+                  <span className="inline-block px-3 py-1 border text-sm rounded-full mb-3 border-black text-black group-hover:border-white group-hover:text-white">
                     {post.category}
                   </span>
-                  <h3 className="text-2xl mb-3 transition-colors text-chocolate-600 group-hover:text-cream-200">
+                  <h3 className="text-2xl mb-3 transition-colors text-black group-hover:text-white">
                     {post.title}
                   </h3>
-                  <p className="mb-4 line-clamp-3 text-chocolate-600 group-hover:text-cream-200">
+                  <p className="mb-4 line-clamp-3 text-black group-hover:text-white">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center justify-between text-sm mb-4 text-chocolate-400 group-hover:text-cream-200">
+                  <div className="flex items-center justify-between text-sm mb-4 text-black/60 group-hover:text-white">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       <span>{post.date}</span>
@@ -100,7 +100,7 @@ export function Blog() {
                   </div>
                   <a
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 transition-colors text-chocolate-600 group-hover:text-cream-200"
+                    className="inline-flex items-center gap-2 transition-colors text-black group-hover:text-white"
                   >
                     Read More
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -120,7 +120,7 @@ export function Blog() {
               className={`w-3 h-3 rounded-full transition-all ${
                 currentIndex === index
                   ? "bg-accent"
-                  : "bg-chocolate-600/30 hover:bg-chocolate-600/50"
+                  : "bg-black/30 hover:bg-black/50"
               }`}
             />
           ))}
@@ -129,7 +129,7 @@ export function Blog() {
         <div className="text-center mt-12">
           {/* <a
             href="#"
-            className="inline-block px-8 py-3 border-2 rounded-full transition-colors text-lg border-accent text-accent hover:bg-accent hover:text-cream-200"
+            className="inline-block px-8 py-3 border-2 rounded-full transition-colors text-lg border-accent text-accent hover:bg-accent hover:text-white"
           >
             View All Posts
           </a> */}
