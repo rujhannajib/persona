@@ -6,6 +6,23 @@ This is a Next.js template which can be deployed to [Replit](https://docs.replit
 
 This template can be used to deploy your Next.js application to [Replit](https://docs.replit.com/getting-started/quickstarts/next-js-app). It comes pre-configured with a `.replit` file, which selects the right settings for you.
 
+## Run with Docker
+
+Build and run the production image:
+
+```bash
+docker build -t persona .
+docker run --rm -p 3000:3000 persona
+```
+
+Or with Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Then open http://localhost:3000.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
