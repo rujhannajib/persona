@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { Github } from "./BrandIcons";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { projects } from "@/data/projects";
 

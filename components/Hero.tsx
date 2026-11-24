@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Github, Linkedin } from './BrandIcons';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const resume_url = "https://drive.google.com/file/d/11TOexg4iOjw34FUSKN3JKpOOtRlv2Zck/view?usp=sharing"
