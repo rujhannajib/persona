@@ -1,0 +1,80 @@
+name: Outdated dependency scan
+
+on:
+  schedule:
+    - cron: "0 1 1 * *"   # 1st of every month, 01:00 UTC (09:00 MYT)
+  workflow_dispatch:
+    inputs:
+      fail_on_outdated:
+        description: "Fail the run if anything is outdated"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    env:
+      REPORT: /tmp/outdated-report.md
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci --ignore-scripts; else npm install --ignore-scripts; fi
+
+      - name: Check for outdated packages
+        id: scan
+        run: |
+          # npm outdated exits 1 when it finds something, so don't let that fail the step
+          npm outdated --json > npm.json || true
+
+          python3 - <<'EOF'
+          import json, os
+          raw = open("npm.json").read().strip() or "{}"
+          data = json.loads(raw)
+          with open(os.environ["REPORT"], "w") as r:
+              r.write("# Outdated dependencies\n\n")
+              if not data:
+                  r.write("All up to date.\n")
+              else:
+                  r.write("| Package | Current | Wanted | Latest | Type |\n|---|---|---|---|---|\n")
+                  for name, d in sorted(data.items()):
+                      if isinstance(d, list):  # workspaces can return a list
+                          d = d[0]
+                      r.write(f"| {name} | {d.get('current','missing')} | {d.get('wanted','')} | "
+                              f"{d.get('latest','')} | {d.get('type','')} |\n")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"count={len(data)}\n")
+          EOF
+
+          cat "$REPORT" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open or update tracking issue
+        if: steps.scan.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          LABEL="outdated-dependencies"
+          gh label create "$LABEL" --color FBCA04 --description "Automated dependency scan" 2>/dev/null || true
+          EXISTING=$(gh issue list --label "$LABEL" --state open --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --body-file "$REPORT"
+            echo "Updated issue #$EXISTING"
+          else
+            gh issue create --title "Outdated dependencies (${{ steps.scan.outputs.count }})" \
+              --label "$LABEL" --body-file "$REPORT"
+          fi
+
+      - name: Fail if requested
+        if: inputs.fail_on_outdated && steps.scan.outputs.count != '0'
+        run: |
+          echo "::error::${{ steps.scan.outputs.count }} outdated dependencies found"
+          exit 1
