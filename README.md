@@ -1,14 +1,57 @@
-# Deploy Next.js to Replit
+# Persona
 
-This is a Next.js template which can be deployed to [Replit](https://docs.replit.com/getting-started/quickstarts/next-js-app).
+My personal portfolio and blog, built with Next.js, React and Tailwind CSS. It has sections for about, experience timeline, skills, projects and blog posts.
 
-## Deploying to Replit
+## Tech stack
 
-This template can be used to deploy your Next.js application to [Replit](https://docs.replit.com/getting-started/quickstarts/next-js-app). It comes pre-configured with a `.replit` file, which selects the right settings for you.
+- [Next.js](https://nextjs.org) 16 (App Router), [React](https://react.dev) 19, TypeScript
+- [Tailwind CSS](https://tailwindcss.com) 4 with `tw-animate-css`
+- [lucide-react](https://lucide.dev) icons
+- pnpm for package management
+
+## Getting started
+
+Requires Node.js 20.9 or later and pnpm (`corepack enable` sets it up).
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Then open http://localhost:3000.
+
+| Script       | What it does                       |
+| ------------ | ---------------------------------- |
+| `pnpm dev`   | Start the dev server on port 3000  |
+| `pnpm build` | Build for production               |
+| `pnpm start` | Serve the production build         |
+
+## Project structure
+
+```
+app/
+  page.tsx            Home page (Hero, About, Skills, Projects, Blog)
+  blog/[slug]/        Individual blog post pages
+components/           Page sections and shared UI
+data/
+  timeline.ts         Work and education history
+  projects.ts         Project cards
+  blog.ts             Blog posts (content stored inline)
+public/               Images, logo and other static assets
+styles/tailwind.css   Global styles
+```
+
+## Updating content
+
+All site content lives in [`data/`](data/), so most updates don't touch components:
+
+- **Experience**: add an entry to the top of the `timeline` array in [`data/timeline.ts`](data/timeline.ts).
+- **Projects**: add to [`data/projects.ts`](data/projects.ts) and put the image in `public/projects/`.
+- **Blog posts**: add to [`data/blog.ts`](data/blog.ts) with a unique `slug`; images go in `public/blogs/`. The post is served at `/blog/<slug>`.
 
 ## Run with Docker
 
-Build and run the production image:
+The [`Dockerfile`](Dockerfile) is a multi-stage build that ships only the Next.js standalone output on `node:22-alpine`, to keep the image small.
 
 ```bash
 docker build -t persona .
@@ -21,13 +64,10 @@ Or with Docker Compose:
 docker compose up --build
 ```
 
-Then open http://localhost:3000.
+## Deploying to Replit
 
-## Learn More
+The repo includes a [`.replit`](.replit) file, so it can be imported and deployed on [Replit](https://docs.replit.com/getting-started/quickstarts/next-js-app) as-is.
 
-To learn more about Next.js, take a look at the following resources:
+## Dependency checks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A GitHub Actions workflow ([`outdated_dependencies.yml`](.github/workflows/outdated_dependencies.yml)) runs on the 1st of every month. It scans for outdated packages and opens or updates an issue labelled `outdated-dependencies`. You can also run it manually from the Actions tab.
