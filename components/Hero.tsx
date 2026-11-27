@@ -2,7 +2,7 @@ import { Mail } from 'lucide-react';
 import { Github, Linkedin } from './BrandIcons';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-const resume_url = "https://drive.google.com/file/d/11TOexg4iOjw34FUSKN3JKpOOtRlv2Zck/view?usp=sharing"
+const resume_url = "https://drive.google.com/file/d/11995cQmXzfUpSK4kcH-YsxtnFaJMkAgf/view?usp=sharing"
 const linkedin_url = "https://www.linkedin.com/in/rujhan-najib/"
 const github_url = "https://github.com/rujhannajib"
 
@@ -14,7 +14,7 @@ export function Hero() {
           Rujhan Najib
         </h1>
         <p className="text-xl md:text-2xl text-black/60">
-          CS + Math @ PSU | Former Intern @ MARA, NUS, Nittany AI Advance
+          SWE @ DHL | Former Intern @ MARA, NUS, Nittany AI Advance
         </p>
 
         <div className="pt-8">

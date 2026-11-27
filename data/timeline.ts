@@ -12,22 +12,31 @@ export interface TimelineItem {
 
 export const timeline: TimelineItem[] = [
   {
-    type: "education",
-    icon: GraduationCap,
-    title: "Penn State University",
-    role: "Bachelor of Science in Computer Science",
-    period: "2022 - 2026",
+    type: "work",
+    icon: Briefcase,
+    title: "DHL IT Services",
+    role: "Associate Software Engineer Analyst",
+    period: "Oct 2026 - Present",
     description:
-      "Majoring in Computer Science, with a minor in Mathematics. Focus on  machine learning, and mathematical finance.",
+      "Developing AI agents for DHL's operations, focusing on automation and efficiency improvements.",
   },
   {
     type: "work",
     icon: Briefcase,
-    title: "MARA",
-    role: "Policy Research Intern",
-    period: "Summer 2024",
+    title: "Robopreneur",
+    role: "Application Engineer",
+    period: "Jul 2026 - Oct 2026",
     description:
-      "Crafted comprehensive policies for MRSM, sponsorship programs, finance, and TVET, impacting over 150,000 students.",
+      "Built robot software and hardware.",
+  },
+  {
+    type: "work",
+    icon: Briefcase,
+    title: "NUS (National University of Singapore)",
+    role: "Research Intern",
+    period: "Summer 2025",
+    description:
+      "Conducted a research on improving feature engineering using genetic programming on classification problem.",
   },
   {
     type: "work",
@@ -41,10 +50,10 @@ export const timeline: TimelineItem[] = [
   {
     type: "work",
     icon: Briefcase,
-    title: "NUS (National University of Singapore)",
-    role: "Research Intern",
-    period: "Summer 2025",
+    title: "MARA",
+    role: "Policy Research Intern",
+    period: "Summer 2024",
     description:
-      "Conducted a research on improving feature engineering using genetic programming on classification problem.",
+      "Crafted comprehensive policies for MRSM, sponsorship programs, finance, and TVET, impacting over 150,000 students.",
   },
 ];

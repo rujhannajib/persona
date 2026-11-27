@@ -12,13 +12,7 @@ export function About() {
         </h2>
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <p className="text-lg mb-4 text-black">
-            I'm a passionate computer science student with interests in
-            artificial intelligence, autonomous systems, and finance. I love
-            turning my daily problems into elegant, scalable solutions.
-          </p>
-          <p className="text-lg text-black">
-            When I'm not coding, you'll find me exploring new technologies,
-            reading history books or figuring out trading strategies.
+           Associate Software Engineer Analyst at DHL. I build AI agents for work and for myself, and I'm working toward turning them into income. Interested in AI and robotics. Off the clock, I read a lot of history.
           </p>
         </div>
 
